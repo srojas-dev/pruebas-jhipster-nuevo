@@ -1,0 +1,30 @@
+{
+  "generator-jhipster": {
+    "applicationType": "microservice",
+    "authManagement": false,
+    "authType": "oauth2",
+    "authenticationType": "oauth2",
+    "baseName": "prueba",
+    "clientFramework": "react",
+    "creationTimestamp": 1758189974425,
+    "dataBaseName": "prueba",
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "devServerPort": 9060,
+    "enableHibernateCache": false,
+    "enableTranslation": false,
+    "entities": [],
+    "frontFramework": "react",
+    "internalization": false,
+    "javaPackageName": "l.l.l",
+    "jhipsterVersion": "8.1.0",
+    "jwtSecretKey": "NzAxNDM3NzMxZGM4MGY3NmIyMWIyYTYwOWY5NTE2MjY4NmQ5YmRkMDJjNzBkMDhiNzMyYmFmYzk3MTQ5MDRiNTc1YWRjMGExNTRiNWQzMzhiZjZjMjRjNGI5MjE1OWRlNmFiMmI0NDlmM2NkYmQzMGJjYzJhMTkyODg1YjAxNjc=",
+    "languages": [
+      "es"
+    ],
+    "nativeLanguage": "es",
+    "packageName": "l.l.l",
+    "prodDatabaseType": "mongodb",
+    "skipUserManagement": true
+  }
+}
