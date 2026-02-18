@@ -1,0 +1,57 @@
+{
+  "generator-jhipster": {
+<<<<<<< Updated upstream
+    "applicationType": "monolith",
+    "authManagement": true,
+    "authType": "jwt",
+    "authenticationType": "jwt",
+    "baseName": "asdasd",
+    "clientFramework": "react",
+    "creationTimestamp": 1758804771273,
+    "dataBaseName": "asdasd",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "devServerPort": 9060,
+=======
+    "applicationType": "microservice",
+    "authManagement": false,
+    "authType": "oauth2",
+    "authenticationType": "oauth2",
+    "baseName": "asdasdads",
+    "clientFramework": "react",
+    "creationTimestamp": 1771411564188,
+    "dataBaseName": "asdasdads",
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "devServerPort": 9060,
+    "enableHibernateCache": false,
+>>>>>>> Stashed changes
+    "enableTranslation": false,
+    "entities": [],
+    "frontFramework": "react",
+    "internalization": false,
+<<<<<<< Updated upstream
+    "javaPackageName": "a.a.a",
+    "jhipsterVersion": "8.1.0",
+    "jwtSecretKey": "Y2QzZWQwY2FjYzUxMzVkMWIyYjZlODIxNzU0M2YzMGRhYWRlYzI5ZjI5OWE2MWIxMGUyMDI5NTY1YWU4ODZmODMxMDUzMzM5YzE4ZDA1OGU1YTllMDBmZGEwNGFlNzg0OGE5MmQ1OGYwYzgxN2YzOTQ4ZWEzMWY4MWY1NDg3NjA=",
+    "languages": [
+      "es"
+    ],
+    "nativeLanguage": "es",
+    "packageName": "a.a.a",
+    "prodDatabaseType": "mysql",
+    "skipUserManagement": false
+=======
+    "javaPackageName": "t.t.t",
+    "jhipsterVersion": "8.1.0",
+    "jwtSecretKey": "YTQzNWQ1NzkxYzYxOWYyNGEzZmQ4OGQwYmIwMDNhNWIwMjcwNDFjZWIwNmZkMzc0NTYwY2JlN2E5YzU5MjYzY2NlMWVlYWVhZTMwMmMzNzJhMmQ5OTJhNmVmMzg5OWNlMzczN2I3YjdmMzk5ZDY5Nzc5ZDMyODRmZjQzZGYyOTA=",
+    "languages": [
+      "cs"
+    ],
+    "nativeLanguage": "cs",
+    "packageName": "t.t.t",
+    "prodDatabaseType": "mongodb",
+    "skipUserManagement": true
+>>>>>>> Stashed changes
+  }
+}
