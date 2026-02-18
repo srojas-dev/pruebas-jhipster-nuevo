@@ -3,6 +3,10 @@ import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 
+<<<<<<< Updated upstream
+=======
+import { getLoginUrl } from 'app/shared/util/url-utils';
+>>>>>>> Stashed changes
 import { AccountMenu } from './account';
 
 describe('AccountMenu', () => {
@@ -47,7 +51,11 @@ describe('AccountMenu', () => {
   it('Renders a guest AccountMenu component', () => {
     const html = guestWrapper();
 
+<<<<<<< Updated upstream
     expect(html).toContain('/login');
+=======
+    expect(html).toContain(getLoginUrl());
+>>>>>>> Stashed changes
     expect(html).not.toContain('/logout');
   });
 

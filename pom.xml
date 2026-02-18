@@ -3,12 +3,21 @@
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+<<<<<<< Updated upstream
     <groupId>a.a.a</groupId>
     <artifactId>asdasd</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Asdasd</name>
     <description>Description for Asdasd</description>
+=======
+    <groupId>t.t.t</groupId>
+    <artifactId>asdasdads</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Asdasdads</name>
+    <description>Description for Asdasdads</description>
+>>>>>>> Stashed changes
 
     <properties>
         <!--
@@ -24,7 +33,11 @@
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+<<<<<<< Updated upstream
         <start-class>a.a.a.AsdasdApp</start-class>
+=======
+        <start-class>t.t.t.AsdasdadsApp</start-class>
+>>>>>>> Stashed changes
         <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx1G</argLine>
         <m2e.apt.activation>jdt_apt</m2e.apt.activation>
         <run.addResources>false</run.addResources>
@@ -35,17 +48,25 @@
         <checksum-maven-plugin.version>1.11</checksum-maven-plugin.version>
         <frontend-maven-plugin.version>1.15.0</frontend-maven-plugin.version>
         <git-commit-id-maven-plugin.version>7.0.0</git-commit-id-maven-plugin.version>
+<<<<<<< Updated upstream
         <hibernate.version>6.3.1.Final</hibernate.version>
         <jacoco-maven-plugin.version>0.8.11</jacoco-maven-plugin.version>
         <jaxb-runtime.version>4.0.4</jaxb-runtime.version>
+=======
+        <hazelcast-spring.version>5.3.6</hazelcast-spring.version>
+        <jacoco-maven-plugin.version>0.8.11</jacoco-maven-plugin.version>
+>>>>>>> Stashed changes
         <jib-maven-plugin.architecture>amd64</jib-maven-plugin.architecture>
         <jib-maven-plugin.image>eclipse-temurin:17-jre-focal</jib-maven-plugin.image>
         <jib-maven-plugin.version>3.4.0</jib-maven-plugin.version>
         <lifecycle-mapping.version>1.0.0</lifecycle-mapping.version>
+<<<<<<< Updated upstream
         <liquibase-plugin.password/>
         <liquibase-plugin.url/>
         <liquibase-plugin.username/>
         <liquibase.version>4.24.0</liquibase.version>
+=======
+>>>>>>> Stashed changes
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
         <maven-checkstyle-plugin.version>3.3.1</maven-checkstyle-plugin.version>
@@ -65,13 +86,19 @@
         <nohttp-checkstyle.version>0.0.11</nohttp-checkstyle.version>
         <profile.api-docs/>
         <profile.e2e/>
+<<<<<<< Updated upstream
         <profile.no-liquibase/>
+=======
+>>>>>>> Stashed changes
         <profile.test/>
         <profile.tls/>
         <properties-maven-plugin.version>1.2.1</properties-maven-plugin.version>
         <sonar-maven-plugin.version>3.10.0.2594</sonar-maven-plugin.version>
         <spotless-maven-plugin.version>2.41.1</spotless-maven-plugin.version>
+<<<<<<< Updated upstream
         <validation-api.version>3.0.2</validation-api.version>
+=======
+>>>>>>> Stashed changes
     </properties>
 
     <dependencyManagement>
@@ -83,6 +110,14 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+<<<<<<< Updated upstream
+=======
+            <dependency>
+                <groupId>org.reflections</groupId>
+                <artifactId>reflections</artifactId>
+                <version>0.10.1</version>
+            </dependency>
+>>>>>>> Stashed changes
         </dependencies>
     </dependencyManagement>
 
@@ -110,7 +145,11 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+<<<<<<< Updated upstream
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+=======
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+>>>>>>> Stashed changes
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -121,12 +160,22 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
         <dependency>
+<<<<<<< Updated upstream
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+=======
+            <!-- Spring Security OAuth 2.0 -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+>>>>>>> Stashed changes
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -152,10 +201,13 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
+<<<<<<< Updated upstream
             <artifactId>spring-security-data</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
+=======
+>>>>>>> Stashed changes
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
@@ -165,10 +217,13 @@
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
+<<<<<<< Updated upstream
             <artifactId>jackson-datatype-hibernate6</artifactId>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
+=======
+>>>>>>> Stashed changes
             <artifactId>jackson-datatype-hppc</artifactId>
         </dependency>
         <dependency>
@@ -176,12 +231,22 @@
             <artifactId>jackson-datatype-jsr310</artifactId>
         </dependency>
         <dependency>
+<<<<<<< Updated upstream
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-jaxb-annotations</artifactId>
         </dependency>
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
+=======
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-spring</artifactId>
+            <version>${hazelcast-spring.version}</version>
+>>>>>>> Stashed changes
         </dependency>
         <dependency>
             <groupId>com.tngtech.archunit</groupId>
@@ -198,10 +263,13 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+<<<<<<< Updated upstream
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
         </dependency>
         <dependency>
+=======
+>>>>>>> Stashed changes
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-core</artifactId>
         </dependency>
@@ -210,6 +278,17 @@
             <artifactId>micrometer-registry-prometheus</artifactId>
         </dependency>
         <dependency>
+<<<<<<< Updated upstream
+=======
+            <groupId>io.mongock</groupId>
+            <artifactId>mongock-springboot-v3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.mongock</groupId>
+            <artifactId>mongodb-springdata-v4-driver</artifactId>
+        </dependency>
+        <dependency>
+>>>>>>> Stashed changes
             <groupId>jakarta.annotation</groupId>
             <artifactId>jakarta.annotation-api</artifactId>
         </dependency>
@@ -222,6 +301,7 @@
             <artifactId>commons-lang3</artifactId>
         </dependency>
         <dependency>
+<<<<<<< Updated upstream
             <groupId>org.ehcache</groupId>
             <artifactId>ehcache</artifactId>
             <classifier>jakarta</classifier>
@@ -251,6 +331,8 @@
             <version>${liquibase.version}</version>
         </dependency>
         <dependency>
+=======
+>>>>>>> Stashed changes
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>${mapstruct.version}</version>
@@ -262,13 +344,51 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+<<<<<<< Updated upstream
             <groupId>org.testcontainers</groupId>
             <artifactId>jdbc</artifactId>
+=======
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>junit-jupiter</artifactId>
+>>>>>>> Stashed changes
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.testcontainers</groupId>
+<<<<<<< Updated upstream
             <artifactId>mysql</artifactId>
+=======
+            <artifactId>mongodb</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>testcontainers</artifactId>
+>>>>>>> Stashed changes
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -406,7 +526,11 @@
                             </platforms>
                         </from>
                         <to>
+<<<<<<< Updated upstream
                             <image>asdasd:latest</image>
+=======
+                            <image>asdasdads:latest</image>
+>>>>>>> Stashed changes
                         </to>
                         <container>
                             <entrypoint>
@@ -415,7 +539,12 @@
                                 <arg>/entrypoint.sh</arg>
                             </entrypoint>
                             <ports>
+<<<<<<< Updated upstream
                                 <port>8080</port>
+=======
+                                <port>8081</port>
+                                <port>5701/udp</port>
+>>>>>>> Stashed changes
                             </ports>
                             <environment>
                                 <SPRING_OUTPUT_ANSI_ENABLED>ALWAYS</SPRING_OUTPUT_ANSI_ENABLED>
@@ -511,6 +640,7 @@
                                 <artifactId>mapstruct-processor</artifactId>
                                 <version>${mapstruct.version}</version>
                             </path>
+<<<<<<< Updated upstream
                             <path>
                                 <groupId>org.glassfish.jaxb</groupId>
                                 <artifactId>jaxb-runtime</artifactId>
@@ -521,6 +651,8 @@
                                 <artifactId>hibernate-jpamodelgen</artifactId>
                                 <version>${hibernate.version}</version>
                             </path>
+=======
+>>>>>>> Stashed changes
                         </annotationProcessorPaths>
                     </configuration>
                 </plugin>
@@ -768,6 +900,7 @@
                     </executions>
                 </plugin>
                 <plugin>
+<<<<<<< Updated upstream
                     <groupId>org.liquibase</groupId>
                     <artifactId>liquibase-maven-plugin</artifactId>
                     <version>${liquibase.version}</version>
@@ -808,6 +941,8 @@
                     </dependencies>
                 </plugin>
                 <plugin>
+=======
+>>>>>>> Stashed changes
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>${sonar-maven-plugin.version}</version>
@@ -830,11 +965,16 @@
             </activation>
             <properties>
                 <!-- default Spring profiles -->
+<<<<<<< Updated upstream
                 <spring.profiles.active>dev${profile.tls}${profile.no-liquibase}</spring.profiles.active>
                 <profile.test>testdev</profile.test>
                 <liquibase-plugin.url>jdbc:mysql://localhost:3306/asdasd</liquibase-plugin.url>
                 <liquibase-plugin.username>root</liquibase-plugin.username>
                 <liquibase-plugin.password/>
+=======
+                <spring.profiles.active>dev${profile.tls}</spring.profiles.active>
+                <profile.test>testdev</profile.test>
+>>>>>>> Stashed changes
             </properties>
             <dependencies>
                 <dependency>
@@ -922,6 +1062,7 @@
                     <artifactId>mapstruct-processor</artifactId>
                     <version>${mapstruct.version}</version>
                 </dependency>
+<<<<<<< Updated upstream
                 <dependency>
                     <groupId>org.hibernate.orm</groupId>
                     <artifactId>hibernate-jpamodelgen</artifactId>
@@ -943,6 +1084,16 @@
                 <liquibase-plugin.url>jdbc:mysql://localhost:3306/asdasd</liquibase-plugin.url>
                 <liquibase-plugin.username>root</liquibase-plugin.username>
                 <liquibase-plugin.password/>
+=======
+            </dependencies>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <!-- default Spring profiles -->
+                <spring.profiles.active>prod${profile.api-docs}${profile.tls}${profile.e2e}</spring.profiles.active>
+                <profile.test>testprod</profile.test>
+>>>>>>> Stashed changes
             </properties>
             <build>
                 <plugins>
@@ -1156,8 +1307,34 @@
             </build>
             <properties>
                 <!-- default Spring profiles -->
+<<<<<<< Updated upstream
                 <spring.profiles.active>dev${profile.no-liquibase}</spring.profiles.active>
             </properties>
         </profile>
+=======
+                <spring.profiles.active>dev</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <!--
+                Profile for tracing requests with Zipkin.
+            -->
+            <id>zipkin</id>
+            <dependencies>
+                <dependency>
+                    <groupId>io.micrometer</groupId>
+                    <artifactId>micrometer-tracing</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>io.micrometer</groupId>
+                    <artifactId>micrometer-tracing-bridge-brave</artifactId>
+                </dependency>
+                <dependency>
+                    <groupId>io.zipkin.reporter2</groupId>
+                    <artifactId>zipkin-reporter-brave</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+>>>>>>> Stashed changes
     </profiles>
 </project>

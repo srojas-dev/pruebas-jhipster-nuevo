@@ -17,13 +17,26 @@ logging:
   level:
     ROOT: INFO
     tech.jhipster: INFO
+<<<<<<< Updated upstream
     a.a.a: INFO
+=======
+    t.t.t: INFO
+>>>>>>> Stashed changes
 
 management:
   prometheus:
     metrics:
       export:
         enabled: false
+<<<<<<< Updated upstream
+=======
+  zipkin: # Use the "zipkin" Maven profile to have the Spring Cloud Zipkin dependencies
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0 # report 100% of traces
+>>>>>>> Stashed changes
 
 spring:
   devtools:
@@ -31,6 +44,7 @@ spring:
       enabled: false
     livereload:
       enabled: false
+<<<<<<< Updated upstream
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://localhost:3306/asdasd?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&createDatabaseIfNotExist=true
@@ -52,12 +66,27 @@ spring:
     port: 25
     username:
     password:
+=======
+  cloud:
+    consul:
+      discovery:
+        prefer-ip-address: true
+      host: localhost
+      port: 8500
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/asdasdads
+>>>>>>> Stashed changes
   thymeleaf:
     cache: true
 
 # ===================================================================
 # To enable TLS in production, generate a certificate using:
+<<<<<<< Updated upstream
 # keytool -genkey -alias asdasd -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+=======
+# keytool -genkey -alias asdasdads -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650
+>>>>>>> Stashed changes
 #
 # You can also use Let's Encrypt:
 # See details in topic "Create a Java Keystore (.JKS) from Let's Encrypt Certificates" on https://maximilian-boehm.com/en-gb/blog
@@ -75,7 +104,11 @@ spring:
 #     ciphers: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 ,TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 ,TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 ,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_DHE_RSA_WITH_AES_128_CBC_SHA256,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_DHE_RSA_WITH_AES_256_CBC_SHA256,TLS_DHE_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_256_CBC_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA,TLS_RSA_WITH_CAMELLIA_256_CBC_SHA,TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA,TLS_RSA_WITH_CAMELLIA_128_CBC_SHA
 # ===================================================================
 server:
+<<<<<<< Updated upstream
   port: 8080
+=======
+  port: 8081
+>>>>>>> Stashed changes
   shutdown: graceful # see https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-graceful-shutdown
   compression:
     enabled: true
@@ -93,6 +126,7 @@ jhipster:
     cache: # Used by the CachingHttpHeadersFilter
       timeToLiveInDays: 1461
   cache: # Cache configuration
+<<<<<<< Updated upstream
     ehcache: # Ehcache configuration
       time-to-live-seconds: 3600 # By default objects stay 1 hour in the cache
       max-entries: 1000 # Number of objects in each cache entry
@@ -110,6 +144,11 @@ jhipster:
         token-validity-in-seconds-for-remember-me: 2592000
   mail: # specific JHipster mail property, for standard properties see MailProperties
     base-url: http://my-server-url-to-change # Modify according to your server's URL
+=======
+    hazelcast: # Hazelcast distributed cache
+      time-to-live-seconds: 3600
+      backup-count: 1
+>>>>>>> Stashed changes
   logging:
     use-json-format: false # By default, logs are not in Json format
     logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration

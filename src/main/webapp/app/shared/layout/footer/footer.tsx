@@ -9,7 +9,11 @@ const Footer = () => (
     <Row>
       <Col md="12">
         <p>
+<<<<<<< Updated upstream
           Pie de página
+=======
+          Toto je vaše zápatí
+>>>>>>> Stashed changes
         </p>
       </Col>
     </Row>

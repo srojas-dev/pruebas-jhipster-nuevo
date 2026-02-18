@@ -7,6 +7,7 @@ import { AppThunk } from 'app/config/store';
 const initialState = {
   loading: false,
   errorMessage: null,
+<<<<<<< Updated upstream
   logs: {
     loggers: [] as any[]
   },
@@ -17,6 +18,8 @@ const initialState = {
     configProps: {} as any,
     env: {} as any
   },
+=======
+>>>>>>> Stashed changes
   totalItems: 0
 };
 
@@ -24,6 +27,7 @@ export type AdministrationState =  Readonly<typeof initialState>;
 
 // Actions
 
+<<<<<<< Updated upstream
 export const getSystemHealth = createAsyncThunk('administration/fetch_health', async () => axios.get<any>('management/health'), {
   serializeError: serializeAxiosError,
 });
@@ -60,6 +64,8 @@ export const getConfigurations = createAsyncThunk('administration/fetch_configur
 export const getEnv = createAsyncThunk('administration/fetch_env', async () => axios.get<any>('management/env'), {
   serializeError: serializeAxiosError,
 });
+=======
+>>>>>>> Stashed changes
 
 export const AdministrationSlice = createSlice({
   name: 'administration',
@@ -67,6 +73,7 @@ export const AdministrationSlice = createSlice({
   reducers: {
   },
   extraReducers(builder) {
+<<<<<<< Updated upstream
     builder
       .addCase(getSystemHealth.fulfilled, (state, action) => {
         state.loading = false;
@@ -128,6 +135,8 @@ export const AdministrationSlice = createSlice({
           state.loading = false;
         }
       );
+=======
+>>>>>>> Stashed changes
   },
 });
 

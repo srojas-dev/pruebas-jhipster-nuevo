@@ -103,6 +103,7 @@ return merge(
     new ForkTsCheckerWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
+<<<<<<< Updated upstream
         {
           // https://github.com/swagger-api/swagger-ui/blob/v4.6.1/swagger-ui-dist-package/README.md
           context: require('swagger-ui-dist').getAbsoluteFSPath(),
@@ -115,6 +116,8 @@ return merge(
           to: 'swagger-ui/',
         },
         { from: './src/main/webapp/swagger-ui/', to: 'swagger-ui/' },
+=======
+>>>>>>> Stashed changes
         { from: './src/main/webapp/content/', to: 'content/' },
         { from: './src/main/webapp/favicon.ico', to: 'favicon.ico' },
         { from: './src/main/webapp/manifest.webapp', to: 'manifest.webapp' },
@@ -130,6 +133,10 @@ return merge(
     }),
   ]
 }
+<<<<<<< Updated upstream
+=======
+,require('./webpack.microfrontend')({ serve: options.env.WEBPACK_SERVE })
+>>>>>>> Stashed changes
 // jhipster-needle-add-webpack-config - JHipster will add custom config
 );
 };

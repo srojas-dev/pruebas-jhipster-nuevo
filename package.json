@@ -1,7 +1,13 @@
 {
+<<<<<<< Updated upstream
   "name": "asdasd",
   "version": "0.0.1-SNAPSHOT",
   "description": "Description for Asdasd",
+=======
+  "name": "asdasdads",
+  "version": "0.0.1-SNAPSHOT",
+  "description": "Description for Asdasdads",
+>>>>>>> Stashed changes
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [
@@ -143,7 +149,11 @@
     "java:war": "./mvnw -ntp verify -DskipTests --batch-mode -Pwar",
     "java:docker": "./mvnw -ntp verify -DskipTests -Pprod jib:dockerBuild",
     "java:docker:arm64": "npm run java:docker -- -Djib-maven-plugin.architecture=arm64",
+<<<<<<< Updated upstream
     "backend:unit:test": "./mvnw -ntp -Dskip.installnodenpm -Dskip.npm verify --batch-mode -Dlogging.level.ROOT=OFF -Dlogging.level.tech.jhipster=OFF -Dlogging.level.a.a.a=OFF -Dlogging.level.org.springframework=OFF -Dlogging.level.org.springframework.web=OFF -Dlogging.level.org.springframework.security=OFF",
+=======
+    "backend:unit:test": "./mvnw -ntp -Dskip.installnodenpm -Dskip.npm verify --batch-mode -Dlogging.level.ROOT=OFF -Dlogging.level.tech.jhipster=OFF -Dlogging.level.t.t.t=OFF -Dlogging.level.org.springframework=OFF -Dlogging.level.org.springframework.web=OFF -Dlogging.level.org.springframework.security=OFF",
+>>>>>>> Stashed changes
     "backend:build-cache": "./mvnw dependency:go-offline -ntp",
     "backend:debug": "./mvnw -Dspring-boot.run.jvmArguments=\"-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000\"",
     "java:jar:dev": "npm run java:jar -- -Pdev,webapp",
@@ -155,10 +165,21 @@
     "ci:backend:test": "npm run backend:info && npm run backend:doc:test && npm run backend:nohttp:test && npm run backend:unit:test -- -P$npm_package_config_default_environment",
     "ci:e2e:package": "npm run java:$npm_package_config_packaging:$npm_package_config_default_environment -- -Pe2e -Denforcer.skip=true",
     "preci:e2e:server:start": "npm run services:db:await --if-present && npm run services:others:await --if-present",
+<<<<<<< Updated upstream
     "ci:e2e:server:start": "java -jar target/e2e.$npm_package_config_packaging --spring.profiles.active=e2e,$npm_package_config_default_environment -Dlogging.level.ROOT=OFF -Dlogging.level.tech.jhipster=OFF -Dlogging.level.a.a.a=OFF -Dlogging.level.org.springframework=OFF -Dlogging.level.org.springframework.web=OFF -Dlogging.level.org.springframework.security=OFF --logging.level.org.springframework.web=ERROR",
     "ci:frontend:test": "npm run webapp:build:$npm_package_config_default_environment && npm run test-ci",
     "docker:db:up": "docker compose -f src/main/docker/mysql.yml up --wait",
     "docker:db:down": "docker compose -f src/main/docker/mysql.yml down -v",
+=======
+    "ci:e2e:server:start": "java -jar target/e2e.$npm_package_config_packaging --spring.profiles.active=e2e,$npm_package_config_default_environment -Dlogging.level.ROOT=OFF -Dlogging.level.tech.jhipster=OFF -Dlogging.level.t.t.t=OFF -Dlogging.level.org.springframework=OFF -Dlogging.level.org.springframework.web=OFF -Dlogging.level.org.springframework.security=OFF --logging.level.org.springframework.web=ERROR",
+    "ci:frontend:test": "npm run webapp:build:$npm_package_config_default_environment && npm run test-ci",
+    "docker:db:up": "docker compose -f src/main/docker/mongodb.yml up --wait",
+    "docker:db:down": "docker compose -f src/main/docker/mongodb.yml down -v",
+    "docker:keycloak:up": "docker compose -f src/main/docker/keycloak.yml up --wait",
+    "docker:keycloak:down": "docker compose -f src/main/docker/keycloak.yml down -v",
+    "docker:consul:up": "docker compose -f src/main/docker/consul.yml up --wait",
+    "docker:consul:down": "docker compose -f src/main/docker/consul.yml down -v",
+>>>>>>> Stashed changes
     "services:up": "docker compose -f src/main/docker/services.yml up --wait",
     "ci:e2e:teardown:docker": "docker compose -f src/main/docker/services.yml down -v && docker ps -a",
     "app:up": "docker compose -f src/main/docker/app.yml up --wait",

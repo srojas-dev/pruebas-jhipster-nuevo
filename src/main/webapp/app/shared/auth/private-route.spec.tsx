@@ -83,7 +83,11 @@ describe('private-route component', () => {
             </PrivateRoute>
           }
         />
+<<<<<<< Updated upstream
         <Route path="/login" element={<div>Login</div>} />
+=======
+        <Route path="/oauth2/authorization/oidc" element={<div>Login</div>} />
+>>>>>>> Stashed changes
       </Routes>,
       {
         isAuthenticated: false,

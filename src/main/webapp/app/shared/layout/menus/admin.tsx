@@ -9,11 +9,14 @@ import { NavDropdown } from './menu-components';
 
 const adminMenuItems = () => (
   <>
+<<<<<<< Updated upstream
     <MenuItem icon="users" to="/admin/user-management">Gestión de usuarios</MenuItem>
     <MenuItem icon="tachometer-alt" to="/admin/metrics">Métricas</MenuItem>
     <MenuItem icon="heart" to="/admin/health">Salud</MenuItem>
     <MenuItem icon="cogs" to="/admin/configuration">Configuración</MenuItem>
     <MenuItem icon="tasks" to="/admin/logs">Logs</MenuItem>
+=======
+>>>>>>> Stashed changes
     {/* jhipster-needle-add-element-to-admin-menu - JHipster will add entities to the admin menu here */}
   </>
 );
@@ -24,7 +27,11 @@ const openAPIItem = () => (
 
 
 export const AdminMenu = ({ showOpenAPI }) => (
+<<<<<<< Updated upstream
   <NavDropdown icon="users-cog" name="Administración" id="admin-menu" data-cy="adminMenu">
+=======
+  <NavDropdown icon="users-cog" name="Administrace" id="admin-menu" data-cy="adminMenu">
+>>>>>>> Stashed changes
       {adminMenuItems()}
       {showOpenAPI && openAPIItem()}
   </NavDropdown>

@@ -1,7 +1,11 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.209.6/containers/java
 {
+<<<<<<< Updated upstream
   "name": "Asdasd",
+=======
+  "name": "Asdasdads",
+>>>>>>> Stashed changes
   "build": {
     "dockerfile": "Dockerfile",
     "args": {
@@ -42,7 +46,11 @@
     9060,
     3001,
     9000,
+<<<<<<< Updated upstream
     8080
+=======
+    8081
+>>>>>>> Stashed changes
   ],
 
   // Use 'postCreateCommand' to run commands after the container is created.

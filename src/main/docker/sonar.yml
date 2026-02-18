@@ -1,5 +1,9 @@
 # This configuration is intended for development purpose, it's **your** responsibility to harden it for production
+<<<<<<< Updated upstream
 name: asdasd
+=======
+name: asdasdads
+>>>>>>> Stashed changes
 services:
   sonar:
     container_name: sonarqube

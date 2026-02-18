@@ -25,6 +25,17 @@ springdoc:
     enabled: false
 ---
 
+<<<<<<< Updated upstream
+=======
+feign:
+  circuitbreaker:
+    enabled: true
+  # client:
+  #   config:
+  #     default:
+  #       connectTimeout: 5000
+  #       readTimeout: 5000
+>>>>>>> Stashed changes
 management:
   endpoints:
     web:
@@ -42,7 +53,10 @@ management:
           - prometheus
           - threaddump
           - caches
+<<<<<<< Updated upstream
           - liquibase
+=======
+>>>>>>> Stashed changes
   endpoint:
     health:
       show-details: when_authorized
@@ -53,7 +67,11 @@ management:
         liveness:
           include: livenessState
         readiness:
+<<<<<<< Updated upstream
           include: readinessState,db
+=======
+          include: readinessState
+>>>>>>> Stashed changes
     jhimetrics:
       enabled: true
   info:
@@ -89,9 +107,28 @@ management:
         autotime:
           enabled: true
 
+<<<<<<< Updated upstream
 spring:
   application:
     name: asdasd
+=======
+mongock:
+  migration-scan-package:
+    - t.t.t.config.dbmigrations
+
+spring:
+  application:
+    name: asdasdads
+  cloud:
+    consul:
+      discovery:
+        healthCheckPath: /management/health
+        instanceId: asdasdads:${spring.application.instance-id:${random.value}}
+        service-name: asdasdads
+      config:
+        watch:
+          enabled: false
+>>>>>>> Stashed changes
   profiles:
     # The commented value for `active` can be replaced with valid Spring profiles to load.
     # Otherwise, it will be filled in by maven when building the JAR file
@@ -105,6 +142,7 @@ spring:
         #- tls
   jmx:
     enabled: false
+<<<<<<< Updated upstream
   data:
     jpa:
       repositories:
@@ -131,6 +169,8 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
         implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+=======
+>>>>>>> Stashed changes
   messages:
     basename: i18n/messages
   main:
@@ -140,13 +180,21 @@ spring:
       enabled: true
   task:
     execution:
+<<<<<<< Updated upstream
       thread-name-prefix: asdasd-task-
+=======
+      thread-name-prefix: asdasdads-task-
+>>>>>>> Stashed changes
       pool:
         core-size: 2
         max-size: 50
         queue-capacity: 10000
     scheduling:
+<<<<<<< Updated upstream
       thread-name-prefix: asdasd-scheduling-
+=======
+      thread-name-prefix: asdasdads-scheduling-
+>>>>>>> Stashed changes
       pool:
         size: 2
   thymeleaf:
@@ -154,6 +202,20 @@ spring:
   output:
     ansi:
       console-available: true
+<<<<<<< Updated upstream
+=======
+  security:
+    oauth2:
+      client:
+        provider:
+          oidc:
+            issuer-uri: http://localhost:9080/realms/jhipster
+        registration:
+          oidc:
+            client-id: internal
+            client-secret: internal
+            scope: openid, profile, email, offline_access # last one for refresh tokens
+>>>>>>> Stashed changes
 
 server:
   servlet:
@@ -177,7 +239,11 @@ info:
 
 jhipster:
   clientApp:
+<<<<<<< Updated upstream
     name: "asdasdApp"
+=======
+    name: "asdasdadsApp"
+>>>>>>> Stashed changes
   # By default CORS is disabled. Uncomment to enable.
   # cors:
   #   allowed-origins: "http://localhost:8100,http://localhost:9000"
@@ -187,12 +253,21 @@ jhipster:
   #   allow-credentials: true
   #   max-age: 1800
   mail:
+<<<<<<< Updated upstream
     from: asdasd@localhost
   api-docs:
     default-include-pattern: /api/**
     management-include-pattern: /management/**
     title: Asdasd API
     description: Asdasd API documentation
+=======
+    from: asdasdads@localhost
+  api-docs:
+    default-include-pattern: /api/**
+    management-include-pattern: /management/**
+    title: Asdasdads API
+    description: Asdasdads API documentation
+>>>>>>> Stashed changes
     version: 0.0.1
     terms-of-service-url:
     contact-name:
@@ -202,6 +277,13 @@ jhipster:
     license-url:
   security:
     content-security-policy: "default-src 'self'; frame-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://storage.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:"
+<<<<<<< Updated upstream
+=======
+    oauth2:
+      audience:
+        - account
+        - api://default
+>>>>>>> Stashed changes
 
 # ===================================================================
 # Application specific properties

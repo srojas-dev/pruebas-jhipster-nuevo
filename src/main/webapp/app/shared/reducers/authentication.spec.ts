@@ -1,12 +1,16 @@
 import thunk from 'redux-thunk';
 import axios from 'axios';
 import sinon from 'sinon';
+<<<<<<< Updated upstream
 import { Storage } from 'react-jhipster';
+=======
+>>>>>>> Stashed changes
 import configureStore from 'redux-mock-store';
 
 import authentication, {
   getSession,
   getAccount,
+<<<<<<< Updated upstream
   authenticate,
   login,
 
@@ -14,6 +18,12 @@ import authentication, {
   logout,
   logoutSession,
   clearAuthToken,
+=======
+
+  logoutServer,
+  clearAuthentication,
+  logout,
+>>>>>>> Stashed changes
   authError,
   clearAuth,
   initialState,
@@ -31,15 +41,19 @@ describe('Authentication reducer tests', () => {
         loading: false,
         isAuthenticated: false,
         errorMessage: null, // Errors returned from server side
+<<<<<<< Updated upstream
         loginSuccess: false,
         loginError: false, // Errors returned from server side
         showModalLogin: false,
+=======
+>>>>>>> Stashed changes
         redirectMessage: null
       });
       expect(isAccountEmpty(toTest));
     });
   });
 
+<<<<<<< Updated upstream
   describe('Requests', () => {
     it('should detect a request', () => {
       expect(authentication(undefined, { type: authenticate.pending.type })).toMatchObject({
@@ -61,6 +75,10 @@ describe('Authentication reducer tests', () => {
         showModalLogin: false
       });
     });
+=======
+
+  describe('Success', () => {
+>>>>>>> Stashed changes
 
     it('should detect a success on get session and be authenticated', () => {
       const payload = { data: { activated: true } };
@@ -84,6 +102,7 @@ describe('Authentication reducer tests', () => {
   });
 
   describe('Failure', () => {
+<<<<<<< Updated upstream
     it('should detect a failure on login', () => {
       const error = { message: 'Something happened.' };
       const toTest = authentication(undefined, { type: authenticate.rejected.type, error });
@@ -95,6 +114,8 @@ describe('Authentication reducer tests', () => {
       });
       expect(isAccountEmpty(toTest));
     });
+=======
+>>>>>>> Stashed changes
 
     it('should detect a failure', () => {
       const error = { message: 'Something happened.' };
@@ -103,7 +124,10 @@ describe('Authentication reducer tests', () => {
       expect(toTest).toMatchObject({
         loading: false,
         isAuthenticated: false,
+<<<<<<< Updated upstream
         showModalLogin: true,
+=======
+>>>>>>> Stashed changes
         errorMessage: error.message
       });
       expect(isAccountEmpty(toTest));
@@ -112,15 +136,23 @@ describe('Authentication reducer tests', () => {
 
   describe('Other cases', () => {
     it('should properly reset the current state when a logout is requested', () => {
+<<<<<<< Updated upstream
       const toTest = authentication(undefined,
       logoutSession()
+=======
+const payload = { data: { logoutUrl: 'http://localhost:8080/logout' } };      const toTest = authentication(undefined,
+      { type: logoutServer.fulfilled.type, payload }
+>>>>>>> Stashed changes
       );
       expect(toTest).toMatchObject({
         loading: false,
         isAuthenticated: false,
+<<<<<<< Updated upstream
         loginSuccess: false,
         loginError: false,
         showModalLogin: true,
+=======
+>>>>>>> Stashed changes
         errorMessage: null,
         redirectMessage: null
       });
@@ -133,9 +165,12 @@ describe('Authentication reducer tests', () => {
       expect(toTest).toMatchObject({
         loading: false,
         isAuthenticated: false,
+<<<<<<< Updated upstream
         loginSuccess: false,
         loginError: false,
         showModalLogin: true,
+=======
+>>>>>>> Stashed changes
         errorMessage: null,
         redirectMessage: message
       });
@@ -146,7 +181,10 @@ describe('Authentication reducer tests', () => {
       const toTest = authentication({ ...initialState, isAuthenticated: true }, clearAuth());
       expect(toTest).toMatchObject({
         loading: false,
+<<<<<<< Updated upstream
         showModalLogin: true,
+=======
+>>>>>>> Stashed changes
         isAuthenticated: false
       });
     });
@@ -173,11 +211,31 @@ describe('Authentication reducer tests', () => {
     });
 
     it('dispatches LOGOUT actions', async () => {
+<<<<<<< Updated upstream
       const expectedActions = [
         logoutSession(),
       ];
       await store.dispatch(logout());
       expect(store.getActions()[0]).toMatchObject(expectedActions[0]);
+=======
+      axios.post = sinon.stub().returns(Promise.resolve({}));
+      const expectedActions = [
+        {
+          type: logoutServer.pending.type
+        },
+        {
+         type: logoutServer.fulfilled.type,
+         payload: {},
+        },
+        {
+         type: getAccount.pending.type,
+        },
+      ];
+      await store.dispatch(logout());
+      expect(store.getActions()[0]).toMatchObject(expectedActions[0]);
+      expect(store.getActions()[1]).toMatchObject(expectedActions[1]);
+      expect(store.getActions()[2]).toMatchObject(expectedActions[2]);
+>>>>>>> Stashed changes
     });
 
     it('dispatches CLEAR_AUTH actions', async () => {
@@ -186,6 +244,7 @@ describe('Authentication reducer tests', () => {
       expect(store.getActions()).toEqual(expectedActions);
     });
 
+<<<<<<< Updated upstream
     it('dispatches LOGIN, GET_SESSION and SET_LOCALE success and request actions', async () => {
       const loginResponse = { headers: { authorization: 'auth' } };
       axios.post = sinon.stub().returns(Promise.resolve(loginResponse));
@@ -237,5 +296,7 @@ describe('Authentication reducer tests', () => {
       expect(Storage.session.get(AUTH_TOKEN_KEY)).toBe(undefined);
       expect(Storage.local.get(AUTH_TOKEN_KEY)).toBe(undefined);
     });
+=======
+>>>>>>> Stashed changes
   });
 });

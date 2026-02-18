@@ -1,19 +1,28 @@
 import axios, { AxiosResponse } from 'axios';
+<<<<<<< Updated upstream
 import { Storage } from 'react-jhipster';
+=======
+>>>>>>> Stashed changes
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { serializeAxiosError } from './reducer.utils';
 
 import { AppThunk } from 'app/config/store';
 
 
+<<<<<<< Updated upstream
 const AUTH_TOKEN_KEY = 'jhi-authenticationToken';
+=======
+>>>>>>> Stashed changes
 
 export const initialState = {
   loading: false,
   isAuthenticated: false,
+<<<<<<< Updated upstream
   loginSuccess: false,
   loginError: false, // Errors returned from server side
   showModalLogin: false,
+=======
+>>>>>>> Stashed changes
   account: {} as any,
   errorMessage: null as unknown as string, // Errors returned from server side
   redirectMessage: null as unknown as string,
@@ -33,6 +42,7 @@ export const getAccount = createAsyncThunk('authentication/get_account', async (
   serializeError: serializeAxiosError,
 });
 
+<<<<<<< Updated upstream
 interface IAuthParams {
   username: string;
   password: string;
@@ -76,6 +86,20 @@ export const logout: () => AppThunk = () => dispatch => {
 
 export const clearAuthentication = messageKey => dispatch => {
   clearAuthToken();
+=======
+
+export const logoutServer = createAsyncThunk('authentication/logout', async () => axios.post<any>('api/logout', {}), {
+  serializeError: serializeAxiosError,
+});
+
+export const logout: () => AppThunk = () => async dispatch => {
+  await dispatch(logoutServer());
+  // fetch new csrf token
+  dispatch(getSession());
+};
+
+export const clearAuthentication = messageKey => dispatch => {
+>>>>>>> Stashed changes
   dispatch(authError(messageKey));
   dispatch(clearAuth());
 };
@@ -84,6 +108,7 @@ export const AuthenticationSlice = createSlice({
   name: 'authentication',
   initialState: initialState as AuthenticationState,
   reducers: {
+<<<<<<< Updated upstream
     logoutSession() {
       return {
         ...initialState,
@@ -94,6 +119,11 @@ export const AuthenticationSlice = createSlice({
       return {
         ...state,
         showModalLogin: true,
+=======
+    authError(state, action) {
+      return {
+        ...state,
+>>>>>>> Stashed changes
         redirectMessage: action.payload
       };
     },
@@ -101,13 +131,17 @@ export const AuthenticationSlice = createSlice({
       return {
         ...state,
         loading: false,
+<<<<<<< Updated upstream
         showModalLogin: true,
+=======
+>>>>>>> Stashed changes
         isAuthenticated: false
       };
     },
   },
   extraReducers(builder) {
     builder
+<<<<<<< Updated upstream
       .addCase(authenticate.rejected, (state, action) => ({
         ...initialState,
         errorMessage: action.error.message,
@@ -121,12 +155,17 @@ export const AuthenticationSlice = createSlice({
         showModalLogin: false,
         loginSuccess: true,
       }))
+=======
+>>>>>>> Stashed changes
       .addCase(getAccount.rejected, (state, action) => ({
         ...state,
         loading: false,
         isAuthenticated: false,
         sessionHasBeenFetched: true,
+<<<<<<< Updated upstream
         showModalLogin: true,
+=======
+>>>>>>> Stashed changes
         errorMessage: action.error.message,
       }))
       .addCase(getAccount.fulfilled, (state, action) => {
@@ -139,16 +178,27 @@ export const AuthenticationSlice = createSlice({
           account: action.payload.data,
         };
       })
+<<<<<<< Updated upstream
       .addCase(authenticate.pending, state => {
         state.loading = true;
       })
+=======
+      .addCase(logoutServer.fulfilled, (state, action) => ({
+        ...initialState,
+        logoutUrl: action.payload.data.logoutUrl
+      }))
+>>>>>>> Stashed changes
       .addCase(getAccount.pending, state => {
         state.loading = true;
       });
   },
 });
 
+<<<<<<< Updated upstream
 export const { logoutSession, authError, clearAuth } = AuthenticationSlice.actions;
+=======
+export const {  authError, clearAuth } = AuthenticationSlice.actions;
+>>>>>>> Stashed changes
 
 // Reducer
 export default AuthenticationSlice.reducer;

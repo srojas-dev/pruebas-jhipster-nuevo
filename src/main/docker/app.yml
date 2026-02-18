@@ -1,29 +1,72 @@
 # This configuration is intended for development purpose, it's **your** responsibility to harden it for production
+<<<<<<< Updated upstream
 name: asdasd
 services:
   app:
     image: asdasd
+=======
+name: asdasdads
+services:
+  app:
+    image: asdasdads
+>>>>>>> Stashed changes
     environment:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=prod,api-docs
       - MANAGEMENT_PROMETHEUS_METRICS_EXPORT_ENABLED=true
+<<<<<<< Updated upstream
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/asdasd?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&createDatabaseIfNotExist=true
       - SPRING_LIQUIBASE_URL=jdbc:mysql://mysql:3306/asdasd?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&createDatabaseIfNotExist=true
     ports:
       - 127.0.0.1:8080:8080
+=======
+      - SPRING_CLOUD_CONSUL_HOST=consul
+      - SPRING_CLOUD_CONSUL_PORT=8500
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/asdasdads
+      - SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OIDC_ISSUER_URI=http://keycloak:9080/realms/jhipster
+      - SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_ID=internal
+      - SPRING_SECURITY_OAUTH2_CLIENT_REGISTRATION_OIDC_CLIENT_SECRET=internal
+>>>>>>> Stashed changes
     healthcheck:
       test:
         - CMD
         - curl
         - -f
+<<<<<<< Updated upstream
         - http://localhost:8080/management/health
+=======
+        - http://localhost:8081/management/health
+>>>>>>> Stashed changes
       interval: 5s
       timeout: 5s
       retries: 40
     depends_on:
+<<<<<<< Updated upstream
       mysql:
         condition: service_healthy
   mysql:
     extends:
       file: ./mysql.yml
       service: mysql
+=======
+      mongodb:
+        condition: service_healthy
+      keycloak:
+        condition: service_healthy
+  mongodb:
+    extends:
+      file: ./mongodb.yml
+      service: mongodb
+  keycloak:
+    extends:
+      file: ./keycloak.yml
+      service: keycloak
+  consul:
+    extends:
+      file: ./consul.yml
+      service: consul
+  consul-config-loader:
+    extends:
+      file: ./consul.yml
+      service: consul-config-loader
+>>>>>>> Stashed changes

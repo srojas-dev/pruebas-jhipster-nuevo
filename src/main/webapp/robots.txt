@@ -2,8 +2,11 @@
 
 User-agent: *
 Disallow: /api/account
+<<<<<<< Updated upstream
 Disallow: /api/account/change-password
 Disallow: /api/account/sessions
+=======
+>>>>>>> Stashed changes
 Disallow: /api/logs/
 Disallow: /api/users/
 Disallow: /management/

@@ -33,7 +33,11 @@ export const PrivateRoute = ({ children, hasAnyAuthorities = [], ...rest }: IOwn
     return (
       <div className="insufficient-authority">
         <div className="alert alert-danger">
+<<<<<<< Updated upstream
           No tiene permisos para acceder a la página.
+=======
+          Nemáte oprávnení k přístupu na tuto stránku.
+>>>>>>> Stashed changes
         </div>
       </div>
     );
@@ -42,7 +46,11 @@ export const PrivateRoute = ({ children, hasAnyAuthorities = [], ...rest }: IOwn
   return (
     <Navigate
       to={{
+<<<<<<< Updated upstream
         pathname: '/login',
+=======
+        pathname: '/oauth2/authorization/oidc',
+>>>>>>> Stashed changes
         search: pageLocation.search,
       }}
       replace

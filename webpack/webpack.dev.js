@@ -15,7 +15,11 @@ module.exports = async (options) => webpackMerge(await commonConfig({ env: ENV }
   devtool: 'cheap-module-source-map', // https://reactjs.org/docs/cross-origin-errors.html
   mode: ENV,
   entry: [
+<<<<<<< Updated upstream
     './src/main/webapp/app/index'
+=======
+    './src/main/webapp/app/main'
+>>>>>>> Stashed changes
   ],
   output: {
     path: utils.root('target/classes/static/'),
@@ -47,7 +51,11 @@ module.exports = async (options) => webpackMerge(await commonConfig({ env: ENV }
     ]
   },
   devServer: {
+<<<<<<< Updated upstream
     hot: true,
+=======
+    hot: false,
+>>>>>>> Stashed changes
     static: {
       directory: './target/classes/static/',
     },
@@ -59,6 +67,11 @@ module.exports = async (options) => webpackMerge(await commonConfig({ env: ENV }
         '/management',
         '/v3/api-docs',
         '/h2-console',
+<<<<<<< Updated upstream
+=======
+        '/oauth2',
+        '/login',
+>>>>>>> Stashed changes
         '/auth'
       ],
       target: `http${options.tls ? 's' : ''}://localhost:8080`,
@@ -103,7 +116,11 @@ module.exports = async (options) => webpackMerge(await commonConfig({ env: ENV }
       reload: false
     }),
     new WebpackNotifierPlugin({
+<<<<<<< Updated upstream
       title: 'Asdasd',
+=======
+      title: 'Asdasdads',
+>>>>>>> Stashed changes
       contentImage: path.join(__dirname, 'logo-jhipster.png')
     })
   ].filter(Boolean)

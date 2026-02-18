@@ -71,7 +71,11 @@ export const PasswordStrengthBar = ({ password }: IPasswordStrengthBarProps) => 
   return (
     <div id="strength">
       <small>
+<<<<<<< Updated upstream
         Seguridad de la contraseña:
+=======
+        Síla hesla:
+>>>>>>> Stashed changes
       </small>
       <ul id="strengthBar">
         {points}

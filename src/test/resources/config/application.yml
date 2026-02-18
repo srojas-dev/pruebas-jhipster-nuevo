@@ -14,12 +14,35 @@
 # ===================================================================
 
 
+<<<<<<< Updated upstream
 spring:
   application:
     name: asdasd
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
     contexts: test
+=======
+mongock:
+  migration-scan-package:
+    - t.t.t.config.dbmigrations
+  mongo-db:
+    read-concern: local
+    write-concern:
+      journal: false
+      w: "majority"
+
+spring:
+  application:
+    name: asdasdads
+  cloud:
+    consul:
+      discovery:
+        enabled: false
+        instanceId: ${spring.application.name}:${spring.application.instance-id:${random.value}}
+      config:
+        enabled: false
+      enabled: false
+>>>>>>> Stashed changes
   jackson:
     serialization:
       write-durations-as-timestamps: false
@@ -31,17 +54,35 @@ spring:
     basename: i18n/messages
   task:
     execution:
+<<<<<<< Updated upstream
       thread-name-prefix: asdasd-task-
+=======
+      thread-name-prefix: asdasdads-task-
+>>>>>>> Stashed changes
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
+<<<<<<< Updated upstream
       thread-name-prefix: asdasd-scheduling-
+=======
+      thread-name-prefix: asdasdads-scheduling-
+>>>>>>> Stashed changes
       pool:
         size: 20
   thymeleaf:
     mode: HTML
+<<<<<<< Updated upstream
+=======
+  # Allow SecurityConfiguration to initialize w/o specifying an empty issuer-uri is OK
+  security:
+    oauth2:
+      client:
+        provider:
+          oidc:
+            issuer-uri: http://DO_NOT_CALL:9080/realms/jhipster
+>>>>>>> Stashed changes
 
 server:
   port: 10344
@@ -54,9 +95,15 @@ server:
 # ===================================================================
 jhipster:
   clientApp:
+<<<<<<< Updated upstream
     name: "asdasdApp"
   mail:
     from: asdasd@localhost.com
+=======
+    name: "asdasdadsApp"
+  mail:
+    from: asdasdads@localhost.com
+>>>>>>> Stashed changes
     base-url: http://127.0.0.1:8080
   logging:
     # To test json console appender
@@ -66,6 +113,7 @@ jhipster:
       host: localhost
       port: 5000
       ring-buffer-size: 512
+<<<<<<< Updated upstream
   security:
     authentication:
       jwt:
@@ -74,6 +122,8 @@ jhipster:
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 86400
+=======
+>>>>>>> Stashed changes
 
 # ===================================================================
 # Application specific properties

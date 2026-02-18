@@ -5,6 +5,7 @@ import thunk from 'redux-thunk';
 import sinon from 'sinon';
 
 import administration, {
+<<<<<<< Updated upstream
   getSystemHealth,
   getSystemMetrics,
   getSystemThreadDump,
@@ -13,6 +14,8 @@ import administration, {
   getConfigurations,
   getEnv,
   setLoggers,
+=======
+>>>>>>> Stashed changes
 } from './administration.reducer';
 
 describe('Administration reducer tests', () => {
@@ -30,8 +33,11 @@ describe('Administration reducer tests', () => {
       errorMessage: null,
       totalItems: 0
     });
+<<<<<<< Updated upstream
     expect(isEmpty(state.logs.loggers));
     expect(isEmpty(state.threadDump));
+=======
+>>>>>>> Stashed changes
   }
 
   function testMultipleTypes(types, payload, testFunction, error?) {
@@ -50,12 +56,15 @@ describe('Administration reducer tests', () => {
     it('should set state to loading', () => {
       testMultipleTypes(
         [
+<<<<<<< Updated upstream
           getLoggers.pending.type,
           getSystemHealth.pending.type,
           getSystemMetrics.pending.type,
           getSystemThreadDump.pending.type,
           getConfigurations.pending.type,
           getEnv.pending.type
+=======
+>>>>>>> Stashed changes
         ],
         {},
         state => {
@@ -72,12 +81,15 @@ describe('Administration reducer tests', () => {
     it('should set state to failed and put an error message in errorMessage', () => {
       testMultipleTypes(
         [
+<<<<<<< Updated upstream
           getLoggers.rejected.type,
           getSystemHealth.rejected.type,
           getSystemMetrics.rejected.type,
           getSystemThreadDump.rejected.type,
           getConfigurations.rejected.type,
           getEnv.rejected.type,
+=======
+>>>>>>> Stashed changes
         ],
         'something happened',
         state => {
@@ -94,6 +106,7 @@ describe('Administration reducer tests', () => {
   });
 
   describe('Success', () => {
+<<<<<<< Updated upstream
     it('should update state according to a successful fetch logs request', () => {
       const payload = { data: {
           loggers: {
@@ -166,11 +179,14 @@ describe('Administration reducer tests', () => {
         }
       });
     });
+=======
+>>>>>>> Stashed changes
   });
   describe('Actions', () => {
     let store;
 
     const resolvedObject = { value: 'whatever' };
+<<<<<<< Updated upstream
     beforeEach(() => {
       const mockStore = configureStore([thunk]);
       store = mockStore({});
@@ -279,5 +295,7 @@ describe('Administration reducer tests', () => {
       expect(store.getActions()[0]).toMatchObject(expectedActions[0]);
       expect(store.getActions()[1]).toMatchObject(expectedActions[1]);
     });
+=======
+>>>>>>> Stashed changes
   });
 });

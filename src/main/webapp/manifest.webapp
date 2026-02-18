@@ -1,6 +1,11 @@
 {
+<<<<<<< Updated upstream
   "name": "Asdasd",
   "short_name": "Asdasd",
+=======
+  "name": "Asdasdads",
+  "short_name": "Asdasdads",
+>>>>>>> Stashed changes
   "icons": [
     {
       "src": "./content/images/jhipster_family_member_0_head-192.png",

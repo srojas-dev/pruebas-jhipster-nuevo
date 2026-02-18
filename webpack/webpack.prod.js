@@ -15,7 +15,11 @@ module.exports = async () => webpackMerge(await commonConfig({ env: ENV }), {
   // devtool: 'source-map', // Enable source maps. Please note that this will slow down the build
   mode: ENV,
   entry: {
+<<<<<<< Updated upstream
     main: './src/main/webapp/app/index'
+=======
+    main: './src/main/webapp/app/main'
+>>>>>>> Stashed changes
   },
   output: {
     path: utils.root('target/classes/static/'),
